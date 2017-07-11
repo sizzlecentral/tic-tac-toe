@@ -20,3 +20,13 @@ h1 {
   border: 2px solid grey;
   overflow: hidden;
 }
+
+.refresh {
+  padding: 20px 0;
+  background-color: black;
+  color: white;
+  font-size: 3em;
+  border: none;
+  width: 100%;
+  margin: 10px 0;
+}

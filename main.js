@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var clickCount = 0;
 
+  var newGame = document.querySelector('.refresh');
+  newGame.addEventListener('click', function() {
+    location.reload();
+  });
+
   var square1 = document.querySelector('#square1');
   square1.addEventListener('click', function(event) {
     clickCount++;
