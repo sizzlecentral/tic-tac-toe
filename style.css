@@ -1,0 +1,22 @@
+h1 {
+  text-align: center;
+  font-family: helvetica, sans serif;
+}
+
+.board {
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  border: 2px solid grey;
+
+}
+
+#square1, #square2, #square3,
+#square4, #square5, #square6,
+#square7, #square8, #square9 {
+  width: 196px;
+  height: 196px;
+  float: left;
+  border: 2px solid grey;
+  overflow: hidden;
+}
