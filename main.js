@@ -1,8 +1,49 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   var clickCount = 0;
+  var winner1 = document.querySelector('.winner1');
+  var winner2 = document.querySelector('.winner2');
 
-  var board = document.querySelector('.board');
+  var chickenDinner = function() {
+    if (square1.classList.contains('player1') && square2.classList.contains('player1') && square3.classList.contains('player1')) {
+      winner1.style.display = 'block';
+    } else if (square4.classList.contains('player1') && square5.classList.contains('player1') && square6.classList.contains('player1')) {
+      winner1.style.display = 'block';
+    } else if (square7.classList.contains('player1') && square8.classList.contains('player1') && square9.classList.contains('player1')) {
+      winner1.style.display = 'block';
+    } else if (square1.classList.contains('player1') && square4.classList.contains('player1') && square7.classList.contains('player1')) {
+      winner1.style.display = 'block';
+    } else if (square2.classList.contains('player1') && square5.classList.contains('player1') && square8.classList.contains('player1')) {
+      winner1.style.display = 'block';
+    } else if (square3.classList.contains('player1') && square6.classList.contains('player1') && square9.classList.contains('player1')) {
+      winner1.style.display = 'block';
+    } else if (square1.classList.contains('player1') && square5.classList.contains('player1') && square9.classList.contains('player1')) {
+      winner1.style.display = 'block';
+    } else if (square3.classList.contains('player1') && square5.classList.contains('player1') && square7.classList.contains('player1')) {
+      winner1.style.display = 'block';
+    } else if (square1.classList.contains('player2') && square2.classList.contains('player2') && square3.classList.contains('player2')) {
+      winner2.style.display = 'block';
+    } else if (square4.classList.contains('player2') && square5.classList.contains('player2') && square6.classList.contains('player2')) {
+      winner2.style.display = 'block';
+    } else if (square7.classList.contains('player2') && square8.classList.contains('player2') && square9.classList.contains('player2')) {
+      winner2.style.display = 'block';
+    } else if (square1.classList.contains('player2') && square4.classList.contains('player2') && square7.classList.contains('player2')) {
+      winner2.style.display = 'block';
+    } else if (square2.classList.contains('player2') && square5.classList.contains('player2') && square8.classList.contains('player2')) {
+      winner2.style.display = 'block';
+    } else if (square3.classList.contains('player2') && square6.classList.contains('player2') && square9.classList.contains('player2')) {
+      winner2.style.display = 'block';
+    } else if (square1.classList.contains('player2') && square5.classList.contains('player2') && square9.classList.contains('player2')) {
+      winner2.style.display = 'block';
+    } else if (square3.classList.contains('player2') && square5.classList.contains('player2') && square7.classList.contains('player2')) {
+      winner2.style.display = 'block';
+    }
+  };
+
+  var newGame = document.querySelector('.refresh');
+  newGame.addEventListener('click', function() {
+    location.reload();
+  });
 
   var clickEvent = function(event) {
     if (this.innerHTML === '') {
@@ -16,13 +57,9 @@ document.addEventListener("DOMContentLoaded", function() {
         this.classList.add('player2');
       }
       this.appendChild(img);
+      chickenDinner();
     }
   };
-
-  var newGame = document.querySelector('.refresh');
-  newGame.addEventListener('click', function() {
-    location.reload();
-  });
 
   var square1 = document.querySelector('#square1');
   square1.addEventListener('click', clickEvent);
